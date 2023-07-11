@@ -1,0 +1,23 @@
+{
+  "name": "jest-mem-leak",
+  "version": "0.0.0",
+  "main": "src",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test-band": "node --expose-gc ./node_modules/.bin/jest --runInBand --logHeapUsage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ],
+    "testMatch": ["**/test*.test.(ts|js)"]
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "mongodb-memory-server": "^8.13.0"
+  },
+  "dependencies": {
+  }
+}
